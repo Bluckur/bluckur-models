@@ -1,6 +1,4 @@
-let SchemaObject = require('schema-object');
-
-module.exports = new SchemaObject ({
+module.exports = ({
     version : String,
     blockNumber : Number,
     validator : String,

@@ -1,9 +1,7 @@
-let SchemaObject = require('schema-object');
-
-let Transaction = require('./transactions/transaction');
+let Transaction = require('./transaction');
 let BlockHeader = require('./blockHeader');
 
-module.exports = new SchemaObject({
+module.exports = ({
     transactions : [Transaction],
     header : Blockheader
 });
