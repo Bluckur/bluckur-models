@@ -21,7 +21,4 @@ Use the following JSON blue prints:
   <li>blockBlueprint</li>
   <li>blockHeaderBlueprint</li>
   <li>transactionBlueprint</li>
-  <li>takeTransactionBlueprint</li>
-  <li>coinbaseTransactionBlueprint</li>
-  <li>coinbaseTransactionBlueprint</li>
 </ul>
