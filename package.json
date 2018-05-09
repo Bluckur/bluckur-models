@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Bluckur/bluckur-models/issues"
   },
-  "homepage": "https://github.com/Bluckur/bluckur-models#readme"
+  "homepage": "https://github.com/Bluckur/bluckur-models#readme",
+  "dependencies": {
+    "schema-object": "^4.0.11"
+  }
 }
