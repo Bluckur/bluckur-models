@@ -9,6 +9,12 @@ Install: npm i bluckur-models
 
 <hr>
 
+Use in javascript:
+
+let models = require('bluckur-models');
+
+e.g.: models.blockBlueprint
+
 Use the following JSON blue prints:
 
 <ul>
