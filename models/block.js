@@ -3,5 +3,5 @@ let BlockHeader = require('./blockHeader');
 
 module.exports = ({
     transactions : [Transaction],
-    header : Blockheader
+    header : BlockHeader
 });
