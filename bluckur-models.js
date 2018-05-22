@@ -17,7 +17,7 @@ module.exports = {
      */
   createBlockInstance(args) {
     const block = new Block({
-      transactions: args.transactions || null,
+      transactions: args.transactions || []],
       blockHeader: args.blockHeader || null,
     });
     if (block.isErrors()) {
