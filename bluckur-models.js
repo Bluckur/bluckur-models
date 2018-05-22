@@ -34,7 +34,7 @@ module.exports = {
   createBlockHeaderInstance(args) {
     const blockHeader = new BlockHeader({
       version: args.version || 1,
-      blockNumber: args.blockNumber || -1,
+      blockNumber: args.blockNumber || 0,
       validator: args.validator || '',
       timestamp: args.timestamp || -1,
       blockReward: args.blockReward || 25,
