@@ -1,7 +1,7 @@
 module.exports = ({
   recipient: String,
   amount: Number,
-  timestamp: String,
+  timestamp: Number,
   type: String,
   sender: String,
   signature: String,
