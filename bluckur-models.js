@@ -58,7 +58,7 @@ module.exports = {
       recipient: args.recipient || '',
       amount: args.amount || 0,
       timestamp: args.timestamp || -1,
-      type: args.type || 'default',
+      type: args.type || '',
       sender: args.sender || '',
       signature: args.signature || '',
       blockHash: args.blockHash || '',
