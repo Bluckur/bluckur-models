@@ -2,6 +2,6 @@ const Transaction = require('./transaction');
 const BlockHeader = require('./blockHeader');
 
 module.exports = ({
-  transactions: Transaction,
+  transactions: { type: Array, arrayType: Transaction },
   blockHeader: BlockHeader,
 });
