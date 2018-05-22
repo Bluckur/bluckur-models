@@ -1,7 +1,7 @@
 const Transaction = require('./transaction');
 const BlockHeader = require('./blockHeader');
 
-const TransactionItem = { type: String };
+const TransactionItem = { type: Transaction };
 
 module.exports = ({
   transactions: [TransactionItem],
