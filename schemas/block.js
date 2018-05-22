@@ -4,6 +4,6 @@ const BlockHeader = require('./blockHeader');
 const TransactionItem = { type: Transaction };
 
 module.exports = ({
-  transactions: [BlockHeader],
+  transactions: [String],
   blockHeader: BlockHeader,
 });
