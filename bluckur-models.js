@@ -35,11 +35,11 @@ module.exports = {
     const blockHeader = new BlockHeader({
       version: args.version || 1,
       blockNumber: args.blockNumber || -1,
-      validator: args.validator || '',
+      validator: args.validator || 'a',
       timestamp: args.timestamp || -1,
       blockReward: args.blockReward || 25,
       blockHash: args.blockHash || '0',
-      parentHash: args.parentHash || '',
+      parentHash: args.parentHash || 'a',
     });
     if (blockHeader.isErrors()) {
       return new Error(blockHeader.getErrors());
@@ -55,13 +55,13 @@ module.exports = {
      */
   createTransactionInstance(args) {
     const transaction = new Transaction({
-      recipient: args.recipient || '',
+      recipient: args.recipient || 'a',
       amount: args.amount || 0,
       timestamp: args.timestamp || -1,
-      type: args.type || '',
-      sender: args.sender || '',
-      signature: args.signature || '',
-      blockHash: args.blockHash || '',
+      type: args.type || 'a',
+      sender: args.sender || 'a',
+      signature: args.signature || 'a',
+      blockHash: args.blockHash || 'a',
     });
     if (transaction.isErrors()) {
       return new Error(transaction.getErrors());
