@@ -2,6 +2,7 @@ const SchemaObject = require('schema-object');
 const blockSchema = require('./schemas/block');
 const blockHeaderSchema = require('./schemas/blockHeader');
 const transactionSchema = require('./schemas/transaction');
+const walletSchema = require('./schemas/wallet');
 
 // Objects
 const Block = new SchemaObject(blockSchema);
@@ -12,6 +13,7 @@ module.exports = {
   blockBlueprint: blockSchema,
   blockHeaderBlueprint: blockHeaderSchema,
   transactionBlueprint: transactionSchema,
+  walletBlueprint: walletSchema,
   /**
      * [createBlockInstance description]
      * @param  {object} args [description]
