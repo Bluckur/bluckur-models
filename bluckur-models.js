@@ -9,6 +9,9 @@ const BlockHeader = new SchemaObject(blockHeaderSchema);
 const Transaction = new SchemaObject(transactionSchema);
 
 module.exports = {
+  blockBlueprint: blockSchema,
+  blockHeaderBlueprint: blockHeaderSchema,
+  transactionBlueprint: transactionSchema,
   /**
      * [createBlockInstance description]
      * @param  {object} args [description]
