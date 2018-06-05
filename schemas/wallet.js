@@ -1,5 +1,5 @@
 module.exports = ({
-    publicKey: String,
-    coins: Number,
-    stake: Number,
-  });
+  publicKey: String,
+  coins: Number,
+  stake: Number,
+});
