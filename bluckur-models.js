@@ -2,18 +2,20 @@ const SchemaObject = require('schema-object');
 const blockSchema = require('./schemas/block');
 const blockHeaderSchema = require('./schemas/blockHeader');
 const transactionSchema = require('./schemas/transaction');
-const walletSchema = require('./schemas/wallet');
+const stateSchema = require('./schemas/state');
 
 // Objects
 const Block = new SchemaObject(blockSchema);
 const BlockHeader = new SchemaObject(blockHeaderSchema);
 const Transaction = new SchemaObject(transactionSchema);
+const State = new SchemaObject(stateSchema);
 
 module.exports = {
   blockBlueprint: blockSchema,
   blockHeaderBlueprint: blockHeaderSchema,
   transactionBlueprint: transactionSchema,
-  walletBlueprint: walletSchema,
+  stateBlueprint: stateSchema,
+
   /**
      * [createBlockInstance description]
      * @param  {object} args [description]
@@ -30,6 +32,7 @@ module.exports = {
     }
     return block;
   },
+
   /**
      * [createBlockHeaderInstance description]
      * @param  {object} args [description]
@@ -72,5 +75,23 @@ module.exports = {
       return new Error(transaction.getErrors());
     }
     return transaction;
+  },
+
+  /**
+   * [createStateInstance description]
+   * @param  {Object} args [description]
+   * @return {Transaction} [description]
+   * @return {Error} [description]
+   */
+  createStateInstance(args) {
+    const state = new State({
+      publicKey: args.publicKey || '',
+      coin: args.coin || 0,
+      stake: args.stake || 0,
+    });
+    if (state.isErrors()) {
+      return new Error(state.getErrors());
+    }
+    return state;
   },
 };
