@@ -30,7 +30,7 @@ module.exports = {
     if (block.isErrors()) {
       return new Error(block.getErrors());
     }
-    return block;
+    return block.toObject();
   },
 
   /**
@@ -52,7 +52,7 @@ module.exports = {
     if (blockHeader.isErrors()) {
       return new Error(blockHeader.getErrors());
     }
-    return blockHeader;
+    return blockHeader.toObject();
   },
 
   /**
@@ -74,7 +74,7 @@ module.exports = {
     if (transaction.isErrors()) {
       return new Error(transaction.getErrors());
     }
-    return transaction;
+    return transaction.toObject();
   },
 
   /**
@@ -92,6 +92,6 @@ module.exports = {
     if (state.isErrors()) {
       return new Error(state.getErrors());
     }
-    return state;
+    return state.toObject();
   },
 };
