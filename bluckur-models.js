@@ -94,4 +94,40 @@ module.exports = {
     }
     return state.toObject();
   },
+
+  /**
+   * [validateBlockSchema description]
+   * @param  {Block} block [description]
+   * @return {Boolean}       [description]
+   */
+  validateBlockSchema(block) {
+    return !(this.createBlockInstance(block) instanceof Error);
+  },
+
+  /**
+   * [validateBlockHeaderSchema description]
+   * @param  {BlockHeader} blockHeader [description]
+   * @return {Boolean}             [description]
+   */
+  validateBlockHeaderSchema(blockHeader) {
+    return !(this.createBlockHeaderInstance(blockHeader) instanceof Error);
+  },
+
+  /**
+   * [validateTransactionSchema description]
+   * @param  {Transaction} transaction [description]
+   * @return {Boolean}             [description]
+   */
+  validateTransactionSchema(transaction) {
+    return !(this.createTransactionInstance(transaction) instanceof Error);
+  },
+
+  /**
+   * [validateStateSchema description]
+   * @param  {State} state [description]
+   * @return {Boolean}       [description]
+   */
+  validateStateSchema(state) {
+    return !(this.createStateInstance(state) instanceof Error);
+  },
 };
