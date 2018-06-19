@@ -30,6 +30,7 @@ module.exports = {
     if (block.isErrors()) {
       return new Error(block.getErrors());
     }
+    block.setUndefined(true);
     return block.toObject();
   },
 
@@ -52,6 +53,7 @@ module.exports = {
     if (blockHeader.isErrors()) {
       return new Error(blockHeader.getErrors());
     }
+    blockHeader.setUndefined(true);
     return blockHeader.toObject();
   },
 
@@ -74,6 +76,7 @@ module.exports = {
     if (transaction.isErrors()) {
       return new Error(transaction.getErrors());
     }
+    transaction.setUndefined(true);
     return transaction.toObject();
   },
 
@@ -92,6 +95,7 @@ module.exports = {
     if (state.isErrors()) {
       return new Error(state.getErrors());
     }
+    state.setUndefined(true);
     return state.toObject();
   },
 
