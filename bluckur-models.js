@@ -5,10 +5,10 @@ const transactionSchema = require('./schemas/transaction');
 const stateSchema = require('./schemas/state');
 
 // Objects
-const Block = new SchemaObject(blockSchema);
-const BlockHeader = new SchemaObject(blockHeaderSchema);
-const Transaction = new SchemaObject(transactionSchema);
-const State = new SchemaObject(stateSchema);
+const Block = new SchemaObject(blockSchema, { setUndefined: true });
+const BlockHeader = new SchemaObject(blockHeaderSchema, { setUndefined: true });
+const Transaction = new SchemaObject(transactionSchema, { setUndefined: true });
+const State = new SchemaObject(stateSchema, { setUndefined: true });
 
 module.exports = {
   blockBlueprint: blockSchema,
@@ -30,7 +30,6 @@ module.exports = {
     if (block.isErrors()) {
       return new Error(block.getErrors());
     }
-    block.setUndefined(true);
     return block.toObject();
   },
 
@@ -53,7 +52,6 @@ module.exports = {
     if (blockHeader.isErrors()) {
       return new Error(blockHeader.getErrors());
     }
-    blockHeader.setUndefined(true);
     return blockHeader.toObject();
   },
 
@@ -76,7 +74,6 @@ module.exports = {
     if (transaction.isErrors()) {
       return new Error(transaction.getErrors());
     }
-    transaction.setUndefined(true);
     return transaction.toObject();
   },
 
@@ -95,7 +92,6 @@ module.exports = {
     if (state.isErrors()) {
       return new Error(state.getErrors());
     }
-    state.setUndefined(true);
     return state.toObject();
   },
 
